@@ -61,3 +61,10 @@ fastlane/screenshots
 iOSInjectionProject/
 
 *.xcscheme
+
+# Ignoring google-cloud-sdk
+google-cloud-sdk/.install/
+google-cloud-sdk/platform/
+*.pyc
+
+
