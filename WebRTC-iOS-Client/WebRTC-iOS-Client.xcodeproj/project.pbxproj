@@ -472,7 +472,7 @@
 					"$(PROJECT_DIR)/WebRTC-iOS-Client/Frameworks/WebRTC-iOS",
 					"$(PROJECT_DIR)/WebRTC-iOS-Client/Lib/include/WebRTC",
 				);
-				HEADER_SEARCH_PATHS = "\"$(SRCROOT)/Pods/Headers\"/**";
+				HEADER_SEARCH_PATHS = "";
 				INFOPLIST_FILE = "WebRTC-iOS-Client/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
@@ -498,7 +498,7 @@
 					"$(PROJECT_DIR)/WebRTC-iOS-Client/Frameworks/WebRTC-iOS",
 					"$(PROJECT_DIR)/WebRTC-iOS-Client/Lib/include/WebRTC",
 				);
-				HEADER_SEARCH_PATHS = "\"$(SRCROOT)/Pods/Headers\"/**";
+				HEADER_SEARCH_PATHS = "";
 				INFOPLIST_FILE = "WebRTC-iOS-Client/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
