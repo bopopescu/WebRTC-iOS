@@ -22,11 +22,11 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vHT-Dt-UL1">
-                                <rect key="frame" x="132.5" y="312" width="109" height="42"/>
+                                <rect key="frame" x="138.5" y="312" width="98" height="42"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
-                                <state key="normal" title="Start chat"/>
+                                <state key="normal" title="Start call"/>
                                 <connections>
-                                    <action selector="startChat:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ZUP-9k-113"/>
+                                    <action selector="startCall:" destination="BYZ-38-t0r" eventType="touchUpInside" id="T9G-Eb-o6y"/>
                                 </connections>
                             </button>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Your name" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="xSO-ob-GfE">
@@ -63,16 +63,17 @@
                     <connections>
                         <outlet property="genderPicker" destination="EaP-wO-K3x" id="e3P-CP-NXM"/>
                         <outlet property="nameField" destination="xSO-ob-GfE" id="6iL-q6-byj"/>
+                        <segue destination="OZR-Y8-Wrh" kind="show" identifier="StartCallSegue" id="cry-vb-jz0"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="877.60000000000002" y="790.25487256371821"/>
+            <point key="canvasLocation" x="890" y="791"/>
         </scene>
-        <!--DialingVC-->
+        <!--CallVC-->
         <scene sceneID="4u7-7s-EZs">
             <objects>
-                <viewController id="OZR-Y8-Wrh" customClass="DialingVC" customModule="WebRTC_iOS_Client" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="OZR-Y8-Wrh" customClass="CallVC" customModule="WebRTC_iOS_Client" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Fcq-Wk-u8D"/>
                         <viewControllerLayoutGuide type="bottom" id="XQo-E7-hjP"/>
@@ -80,8 +81,50 @@
                     <view key="view" contentMode="scaleToFill" id="PXK-ZU-Doj">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="userId" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="daD-L9-L79">
+                                <rect key="frame" x="137" y="118" width="100" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="ZjV-4s-VuV"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Calling" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kLt-lA-2cD">
+                                <rect key="frame" x="137" y="323" width="100" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="SLJ-xL-wh8"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qh8-u0-nE7">
+                                <rect key="frame" x="87" y="527" width="200" height="0.0"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="klm-Hm-b8B"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="daD-L9-L79" firstAttribute="top" secondItem="Fcq-Wk-u8D" secondAttribute="bottom" constant="54" id="0uH-VC-RLI"/>
+                            <constraint firstItem="daD-L9-L79" firstAttribute="centerX" secondItem="PXK-ZU-Doj" secondAttribute="centerX" id="1if-yG-795"/>
+                            <constraint firstItem="kLt-lA-2cD" firstAttribute="centerX" secondItem="PXK-ZU-Doj" secondAttribute="centerX" id="4lP-eg-nps"/>
+                            <constraint firstItem="qh8-u0-nE7" firstAttribute="centerX" secondItem="PXK-ZU-Doj" secondAttribute="centerX" id="gqy-K9-oq5"/>
+                            <constraint firstItem="kLt-lA-2cD" firstAttribute="centerY" secondItem="PXK-ZU-Doj" secondAttribute="centerY" id="og1-ut-RbG"/>
+                            <constraint firstItem="XQo-E7-hjP" firstAttribute="top" secondItem="qh8-u0-nE7" secondAttribute="bottom" constant="140" id="pUe-bs-y9U"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="connectionStatusLabel" destination="kLt-lA-2cD" id="SzN-iu-uWo"/>
+                        <outlet property="matchedRoomId" destination="qh8-u0-nE7" id="CEY-K7-q23"/>
+                        <outlet property="userIdField" destination="daD-L9-L79" id="NMw-4k-VmJ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8yt-1E-MEt" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

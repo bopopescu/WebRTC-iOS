@@ -43,8 +43,9 @@
 		E07AEBAC1E70DF9D001A7E37 /* SRWebSocket.m in Sources */ = {isa = PBXBuildFile; fileRef = E07AEB9A1E70DF9D001A7E37 /* SRWebSocket.m */; };
 		E07AEBAF1E70E2B5001A7E37 /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = E07AEBAE1E70E2B5001A7E37 /* Config.swift */; };
 		E07AEBB41E70E830001A7E37 /* NSURLSession+SynchronousRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = E07AEBB31E70E830001A7E37 /* NSURLSession+SynchronousRequest.m */; };
-		E07AEBB61E70EB26001A7E37 /* DialingVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E07AEBB51E70EB26001A7E37 /* DialingVC.swift */; };
+		E07AEBB61E70EB26001A7E37 /* CallVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E07AEBB51E70EB26001A7E37 /* CallVC.swift */; };
 		E07AEBB81E70EB9C001A7E37 /* HomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E07AEBB71E70EB9C001A7E37 /* HomeVC.swift */; };
+		E07AEBBE1E7123DD001A7E37 /* HTTPRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = E07AEBBD1E7123DD001A7E37 /* HTTPRequest.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -125,8 +126,10 @@
 		E07AEBAE1E70E2B5001A7E37 /* Config.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
 		E07AEBB21E70E830001A7E37 /* NSURLSession+SynchronousRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSURLSession+SynchronousRequest.h"; sourceTree = "<group>"; };
 		E07AEBB31E70E830001A7E37 /* NSURLSession+SynchronousRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSURLSession+SynchronousRequest.m"; sourceTree = "<group>"; };
-		E07AEBB51E70EB26001A7E37 /* DialingVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DialingVC.swift; sourceTree = "<group>"; };
+		E07AEBB51E70EB26001A7E37 /* CallVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CallVC.swift; sourceTree = "<group>"; };
 		E07AEBB71E70EB9C001A7E37 /* HomeVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeVC.swift; sourceTree = "<group>"; };
+		E07AEBBC1E7123DD001A7E37 /* HTTPRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HTTPRequest.h; sourceTree = "<group>"; };
+		E07AEBBD1E7123DD001A7E37 /* HTTPRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HTTPRequest.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -176,7 +179,7 @@
 				E07AEB111E70A930001A7E37 /* Bridging.h */,
 				E07AEBAE1E70E2B5001A7E37 /* Config.swift */,
 				E06CF4A41E70A04C004B99B8 /* AppDelegate.swift */,
-				E07AEBB51E70EB26001A7E37 /* DialingVC.swift */,
+				E07AEBB51E70EB26001A7E37 /* CallVC.swift */,
 				E06CF4A81E70A04C004B99B8 /* Main.storyboard */,
 				E06CF4AB1E70A04C004B99B8 /* Assets.xcassets */,
 				E06CF4AD1E70A04C004B99B8 /* LaunchScreen.storyboard */,
@@ -209,6 +212,7 @@
 		E07AEB6F1E70DF9D001A7E37 /* Lib */ = {
 			isa = PBXGroup;
 			children = (
+				E07AEBBB1E7123DD001A7E37 /* Utility */,
 				E07AEB701E70DF9D001A7E37 /* ARDAppClient+Internal.h */,
 				E07AEB711E70DF9D001A7E37 /* ARDAppClient.h */,
 				E07AEB721E70DF9D001A7E37 /* ARDAppClient.m */,
@@ -253,6 +257,15 @@
 				E07AEBB31E70E830001A7E37 /* NSURLSession+SynchronousRequest.m */,
 			);
 			path = Lib;
+			sourceTree = "<group>";
+		};
+		E07AEBBB1E7123DD001A7E37 /* Utility */ = {
+			isa = PBXGroup;
+			children = (
+				E07AEBBC1E7123DD001A7E37 /* HTTPRequest.h */,
+				E07AEBBD1E7123DD001A7E37 /* HTTPRequest.m */,
+			);
+			path = Utility;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -341,8 +354,9 @@
 				E07AEBB81E70EB9C001A7E37 /* HomeVC.swift in Sources */,
 				E07AEB9D1E70DF9D001A7E37 /* ARDBitrateTracker.m in Sources */,
 				E07AEBAB1E70DF9D001A7E37 /* RTCSessionDescription+JSON.m in Sources */,
-				E07AEBB61E70EB26001A7E37 /* DialingVC.swift in Sources */,
+				E07AEBB61E70EB26001A7E37 /* CallVC.swift in Sources */,
 				E07AEBA11E70DF9D001A7E37 /* ARDRegisterResponse.m in Sources */,
+				E07AEBBE1E7123DD001A7E37 /* HTTPRequest.m in Sources */,
 				E07AEBAC1E70DF9D001A7E37 /* SRWebSocket.m in Sources */,
 				E06CF4A51E70A04C004B99B8 /* AppDelegate.swift in Sources */,
 				E07AEBA01E70DF9D001A7E37 /* ARDMessageResponse.m in Sources */,

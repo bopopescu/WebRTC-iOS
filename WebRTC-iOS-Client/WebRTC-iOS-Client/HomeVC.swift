@@ -24,7 +24,7 @@ class HomeVC: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
-    @IBAction func startChat(_ sender: Any) {
+    @IBAction func startCall(_ sender: Any) {
         
         if nameField.text!.isEmpty{
             AppDelegate.showAlert("Sorrry", message: "Please enter a valid name", context: self)
@@ -32,11 +32,13 @@ class HomeVC: UIViewController {
         }
         
         if genderPicker.selectedSegmentIndex == 0{
-            print("Male")
+            AppDelegate.gender = "m"
         }else{
-            print("Female")
+            AppDelegate.gender = "f"
         }
-        // TODO: Register to server
+        AppDelegate.userId = nameField.text!
+        
+        performSegue(withIdentifier: "StartCallSegue", sender: self)
         
     }
 
