@@ -32,3 +32,18 @@ Simply change Config.swift for your settings
 https://tech.appear.in/2015/05/25/Getting-started-with-WebRTC-on-iOS/
 * Client app demo
 https://github.com/Mahabali/Apprtc-swift
+
+# Open a port on mac
+Edit by adding following lines
+
+```
+sudo vim /etc/pf.conf
+
+# Open port 8080 for TCP on all interfaces
+pass in proto tcp from any to any port 8080
+```
+Test
+```
+sudo pfctl -vnf /etc/pf.conf
+```
+

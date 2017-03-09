@@ -10,8 +10,8 @@ import Foundation
 
 class Config {
     
-    static let endPoint = "http://127.0.0.1:8080"
+    static let endPoint = "http://192.168.200.112:8080"
     static let enableSSL = true
     
-    static let matchTimeInterval: TimeInterval = 3000
+    static let matchTimeInterval: TimeInterval = 3
 }

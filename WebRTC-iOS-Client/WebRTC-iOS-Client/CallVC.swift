@@ -7,28 +7,47 @@
 //
 
 import UIKit
+import WebRTC
 
-class CallVC: UIViewController {
+class CallVC: UIViewController, ARDAppClientDelegate {
+    
+    var client:ARDAppClient?
     
     @IBOutlet weak var userIdField: UILabel!
     @IBOutlet weak var connectionStatusLabel: UILabel!
     
     @IBOutlet weak var matchedRoomId: UILabel!
     
-    override func viewDidAppear(_ animated: Bool) {
-        userIdField.text = AppDelegate.userId
-        scheduleMatchRequest(0)
+    var roomId: String?
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        self.client = ARDAppClient(delegate: self)
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        if let room = roomId{
+            joinRoom(room)
+        }else{
+            userIdField.text = AppDelegate.userId
+            scheduleMatchRequest(0)
+        }
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        self.disconnect()
     }
     
     func joinRoom(_ roomId: String){
         connectionStatusLabel.text = "Connected"
         matchedRoomId.text = roomId
         
+        self.client?.connectToRoom(withId: roomId, isLoopback: false, isAudioOnly: true, shouldMakeAecDump: false, shouldUseLevelControl: false)
     }
     
     func scheduleMatchRequest(_ waitTime: TimeInterval){
         connectionStatusLabel.text = "Calling"
-        
+        print("Calling again")
         DispatchQueue.main.asyncAfter(deadline: .now() + waitTime) {
             let url = "\(Config.endPoint)/match/\(AppDelegate.gender!)/\(AppDelegate.userId!)"
             HTTPRequest.get(url, success: { (response) in
@@ -45,6 +64,57 @@ class CallVC: UIViewController {
             }) { (err) in
                 AppDelegate.showAlert("Error", message: "\(err._code):\(err._domain)", context: self)
             }
+        }
+    }
+    
+}
+
+
+// MARK: WebRTC Implementation
+extension CallVC{
+    
+    func disconnect(){
+        connectionStatusLabel.text = "Disconnected"
+        roomId = nil
+        if let _ = self.client{
+            self.client?.disconnect()
+        }
+    }
+    
+    func appClient(_ client: ARDAppClient!, didChange state: ARDAppClientState) {
+        switch (state) {
+        case .connected:
+            print("Client connected.");
+        case .connecting:
+            print("Client connecting.");
+        case .disconnected:
+            print("Client disconnected.");
+        }
+    }
+    
+    public func appClient(_ client: ARDAppClient!, didError error: Error!) {
+        AppDelegate.showAlert("Error", message: error.localizedDescription, context: self)
+        self.disconnect()
+    }
+    
+    func appClient(_ client: ARDAppClient!, didReceiveLocalVideoTrack localVideoTrack: RTCVideoTrack!) {
+    }
+    
+    func appClient(_ client: ARDAppClient!, didReceiveRemoteVideoTrack remoteVideoTrack: RTCVideoTrack!) {
+    }
+    func appclient(_ client: ARDAppClient!, didRotateWithLocal localVideoTrack: RTCVideoTrack!, remoteVideoTrack: RTCVideoTrack!) {
+    }
+    func appClient(_ client: ARDAppClient!, didGetStats stats: [Any]!) {
+    }
+    func appClient(_ client: ARDAppClient!, didChange state: RTCIceConnectionState) {
+        switch (state) {
+        case .connected:
+            print("ICE connected.");
+        case .disconnected:
+            print("ICE disconnected.");
+        default:
+            print("No op for other status")
+            // No op
         }
     }
 }
