@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		E06CF4A51E70A04C004B99B8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E06CF4A41E70A04C004B99B8 /* AppDelegate.swift */; };
-		E06CF4A71E70A04C004B99B8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E06CF4A61E70A04C004B99B8 /* ViewController.swift */; };
 		E06CF4AA1E70A04C004B99B8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E06CF4A81E70A04C004B99B8 /* Main.storyboard */; };
 		E06CF4AC1E70A04C004B99B8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E06CF4AB1E70A04C004B99B8 /* Assets.xcassets */; };
 		E06CF4AF1E70A04C004B99B8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E06CF4AD1E70A04C004B99B8 /* LaunchScreen.storyboard */; };
@@ -44,6 +43,8 @@
 		E07AEBAC1E70DF9D001A7E37 /* SRWebSocket.m in Sources */ = {isa = PBXBuildFile; fileRef = E07AEB9A1E70DF9D001A7E37 /* SRWebSocket.m */; };
 		E07AEBAF1E70E2B5001A7E37 /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = E07AEBAE1E70E2B5001A7E37 /* Config.swift */; };
 		E07AEBB41E70E830001A7E37 /* NSURLSession+SynchronousRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = E07AEBB31E70E830001A7E37 /* NSURLSession+SynchronousRequest.m */; };
+		E07AEBB61E70EB26001A7E37 /* DialingVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E07AEBB51E70EB26001A7E37 /* DialingVC.swift */; };
+		E07AEBB81E70EB9C001A7E37 /* HomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E07AEBB71E70EB9C001A7E37 /* HomeVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -63,7 +64,6 @@
 /* Begin PBXFileReference section */
 		E06CF4A11E70A04C004B99B8 /* WebRTC-iOS-Client.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "WebRTC-iOS-Client.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E06CF4A41E70A04C004B99B8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		E06CF4A61E70A04C004B99B8 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		E06CF4A91E70A04C004B99B8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		E06CF4AB1E70A04C004B99B8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E06CF4AE1E70A04C004B99B8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -125,6 +125,8 @@
 		E07AEBAE1E70E2B5001A7E37 /* Config.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
 		E07AEBB21E70E830001A7E37 /* NSURLSession+SynchronousRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSURLSession+SynchronousRequest.h"; sourceTree = "<group>"; };
 		E07AEBB31E70E830001A7E37 /* NSURLSession+SynchronousRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSURLSession+SynchronousRequest.m"; sourceTree = "<group>"; };
+		E07AEBB51E70EB26001A7E37 /* DialingVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DialingVC.swift; sourceTree = "<group>"; };
+		E07AEBB71E70EB9C001A7E37 /* HomeVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -174,11 +176,12 @@
 				E07AEB111E70A930001A7E37 /* Bridging.h */,
 				E07AEBAE1E70E2B5001A7E37 /* Config.swift */,
 				E06CF4A41E70A04C004B99B8 /* AppDelegate.swift */,
-				E06CF4A61E70A04C004B99B8 /* ViewController.swift */,
+				E07AEBB51E70EB26001A7E37 /* DialingVC.swift */,
 				E06CF4A81E70A04C004B99B8 /* Main.storyboard */,
 				E06CF4AB1E70A04C004B99B8 /* Assets.xcassets */,
 				E06CF4AD1E70A04C004B99B8 /* LaunchScreen.storyboard */,
 				E06CF4B01E70A04C004B99B8 /* Info.plist */,
+				E07AEBB71E70EB9C001A7E37 /* HomeVC.swift */,
 			);
 			path = "WebRTC-iOS-Client";
 			sourceTree = "<group>";
@@ -335,11 +338,12 @@
 				E07AEBA91E70DF9D001A7E37 /* RTCICEServer+JSON.m in Sources */,
 				E07AEBA31E70DF9D001A7E37 /* ARDSignalingMessage.m in Sources */,
 				E07AEBA51E70DF9D001A7E37 /* ARDUtilities.m in Sources */,
+				E07AEBB81E70EB9C001A7E37 /* HomeVC.swift in Sources */,
 				E07AEB9D1E70DF9D001A7E37 /* ARDBitrateTracker.m in Sources */,
 				E07AEBAB1E70DF9D001A7E37 /* RTCSessionDescription+JSON.m in Sources */,
+				E07AEBB61E70EB26001A7E37 /* DialingVC.swift in Sources */,
 				E07AEBA11E70DF9D001A7E37 /* ARDRegisterResponse.m in Sources */,
 				E07AEBAC1E70DF9D001A7E37 /* SRWebSocket.m in Sources */,
-				E06CF4A71E70A04C004B99B8 /* ViewController.swift in Sources */,
 				E06CF4A51E70A04C004B99B8 /* AppDelegate.swift in Sources */,
 				E07AEBA01E70DF9D001A7E37 /* ARDMessageResponse.m in Sources */,
 				E07AEBA81E70DF9D001A7E37 /* RTCICECandidate+JSON.m in Sources */,
