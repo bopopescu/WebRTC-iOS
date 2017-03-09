@@ -12,7 +12,35 @@
 		E06CF4AA1E70A04C004B99B8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E06CF4A81E70A04C004B99B8 /* Main.storyboard */; };
 		E06CF4AC1E70A04C004B99B8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E06CF4AB1E70A04C004B99B8 /* Assets.xcassets */; };
 		E06CF4AF1E70A04C004B99B8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E06CF4AD1E70A04C004B99B8 /* LaunchScreen.storyboard */; };
+		E07AEB391E70B03F001A7E37 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E07AEB381E70B03F001A7E37 /* CoreGraphics.framework */; };
+		E07AEB3B1E70B045001A7E37 /* CoreVideo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E07AEB3A1E70B045001A7E37 /* CoreVideo.framework */; };
+		E07AEB3D1E70B051001A7E37 /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E07AEB3C1E70B051001A7E37 /* CoreMedia.framework */; };
+		E07AEB411E70B062001A7E37 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E07AEB401E70B062001A7E37 /* AVFoundation.framework */; };
+		E07AEB431E70B068001A7E37 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E07AEB421E70B068001A7E37 /* AudioToolbox.framework */; };
+		E07AEB451E70B075001A7E37 /* GLKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E07AEB441E70B075001A7E37 /* GLKit.framework */; };
+		E07AEB571E70B35D001A7E37 /* Bridging.h in Sources */ = {isa = PBXBuildFile; fileRef = E07AEB111E70A930001A7E37 /* Bridging.h */; };
+		E07AEB611E70DD33001A7E37 /* VideoToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E07AEB601E70DD33001A7E37 /* VideoToolbox.framework */; };
+		E07AEB631E70DE95001A7E37 /* CoreImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E07AEB621E70DE95001A7E37 /* CoreImage.framework */; };
+		E07AEB671E70DEF4001A7E37 /* libc++.1.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = E07AEB641E70DEF4001A7E37 /* libc++.1.dylib */; };
+		E07AEB681E70DEF4001A7E37 /* libicucore.A.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = E07AEB651E70DEF4001A7E37 /* libicucore.A.dylib */; };
+		E07AEB691E70DEF4001A7E37 /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = E07AEB661E70DEF4001A7E37 /* libsqlite3.dylib */; };
+		E07AEB6C1E70DF34001A7E37 /* WebRTC.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E07AEB6A1E70DF04001A7E37 /* WebRTC.framework */; };
+		E07AEB6D1E70DF34001A7E37 /* WebRTC.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = E07AEB6A1E70DF04001A7E37 /* WebRTC.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		E07AEB6E1E70DF34001A7E37 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				E07AEB6D1E70DF34001A7E37 /* WebRTC.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		E06CF4A11E70A04C004B99B8 /* WebRTC-iOS-Client.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "WebRTC-iOS-Client.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -22,6 +50,20 @@
 		E06CF4AB1E70A04C004B99B8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E06CF4AE1E70A04C004B99B8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E06CF4B01E70A04C004B99B8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E07AEB111E70A930001A7E37 /* Bridging.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Bridging.h; sourceTree = "<group>"; };
+		E07AEB361E70B032001A7E37 /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
+		E07AEB381E70B03F001A7E37 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		E07AEB3A1E70B045001A7E37 /* CoreVideo.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreVideo.framework; path = System/Library/Frameworks/CoreVideo.framework; sourceTree = SDKROOT; };
+		E07AEB3C1E70B051001A7E37 /* CoreMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMedia.framework; path = System/Library/Frameworks/CoreMedia.framework; sourceTree = SDKROOT; };
+		E07AEB401E70B062001A7E37 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		E07AEB421E70B068001A7E37 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		E07AEB441E70B075001A7E37 /* GLKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GLKit.framework; path = System/Library/Frameworks/GLKit.framework; sourceTree = SDKROOT; };
+		E07AEB601E70DD33001A7E37 /* VideoToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = VideoToolbox.framework; path = System/Library/Frameworks/VideoToolbox.framework; sourceTree = SDKROOT; };
+		E07AEB621E70DE95001A7E37 /* CoreImage.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreImage.framework; path = System/Library/Frameworks/CoreImage.framework; sourceTree = SDKROOT; };
+		E07AEB641E70DEF4001A7E37 /* libc++.1.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libc++.1.dylib"; path = "WebRTC-iOS-Client/Frameworks/libc++.1.dylib"; sourceTree = "<group>"; };
+		E07AEB651E70DEF4001A7E37 /* libicucore.A.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libicucore.A.dylib; path = "WebRTC-iOS-Client/Frameworks/libicucore.A.dylib"; sourceTree = "<group>"; };
+		E07AEB661E70DEF4001A7E37 /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = "WebRTC-iOS-Client/Frameworks/libsqlite3.dylib"; sourceTree = "<group>"; };
+		E07AEB6A1E70DF04001A7E37 /* WebRTC.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebRTC.framework; path = "WebRTC-iOS-Client/Frameworks/WebRTC-iOS/WebRTC.framework"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,6 +71,18 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E07AEB671E70DEF4001A7E37 /* libc++.1.dylib in Frameworks */,
+				E07AEB681E70DEF4001A7E37 /* libicucore.A.dylib in Frameworks */,
+				E07AEB691E70DEF4001A7E37 /* libsqlite3.dylib in Frameworks */,
+				E07AEB411E70B062001A7E37 /* AVFoundation.framework in Frameworks */,
+				E07AEB3D1E70B051001A7E37 /* CoreMedia.framework in Frameworks */,
+				E07AEB3B1E70B045001A7E37 /* CoreVideo.framework in Frameworks */,
+				E07AEB391E70B03F001A7E37 /* CoreGraphics.framework in Frameworks */,
+				E07AEB631E70DE95001A7E37 /* CoreImage.framework in Frameworks */,
+				E07AEB431E70B068001A7E37 /* AudioToolbox.framework in Frameworks */,
+				E07AEB611E70DD33001A7E37 /* VideoToolbox.framework in Frameworks */,
+				E07AEB451E70B075001A7E37 /* GLKit.framework in Frameworks */,
+				E07AEB6C1E70DF34001A7E37 /* WebRTC.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -40,6 +94,7 @@
 			children = (
 				E06CF4A31E70A04C004B99B8 /* WebRTC-iOS-Client */,
 				E06CF4A21E70A04C004B99B8 /* Products */,
+				E07AEB331E70B02C001A7E37 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -54,6 +109,7 @@
 		E06CF4A31E70A04C004B99B8 /* WebRTC-iOS-Client */ = {
 			isa = PBXGroup;
 			children = (
+				E07AEB111E70A930001A7E37 /* Bridging.h */,
 				E06CF4A41E70A04C004B99B8 /* AppDelegate.swift */,
 				E06CF4A61E70A04C004B99B8 /* ViewController.swift */,
 				E06CF4A81E70A04C004B99B8 /* Main.storyboard */,
@@ -62,6 +118,26 @@
 				E06CF4B01E70A04C004B99B8 /* Info.plist */,
 			);
 			path = "WebRTC-iOS-Client";
+			sourceTree = "<group>";
+		};
+		E07AEB331E70B02C001A7E37 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E07AEB6A1E70DF04001A7E37 /* WebRTC.framework */,
+				E07AEB641E70DEF4001A7E37 /* libc++.1.dylib */,
+				E07AEB651E70DEF4001A7E37 /* libicucore.A.dylib */,
+				E07AEB661E70DEF4001A7E37 /* libsqlite3.dylib */,
+				E07AEB621E70DE95001A7E37 /* CoreImage.framework */,
+				E07AEB601E70DD33001A7E37 /* VideoToolbox.framework */,
+				E07AEB441E70B075001A7E37 /* GLKit.framework */,
+				E07AEB421E70B068001A7E37 /* AudioToolbox.framework */,
+				E07AEB401E70B062001A7E37 /* AVFoundation.framework */,
+				E07AEB3C1E70B051001A7E37 /* CoreMedia.framework */,
+				E07AEB3A1E70B045001A7E37 /* CoreVideo.framework */,
+				E07AEB381E70B03F001A7E37 /* CoreGraphics.framework */,
+				E07AEB361E70B032001A7E37 /* OpenGLES.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -74,6 +150,7 @@
 				E06CF49D1E70A04C004B99B8 /* Sources */,
 				E06CF49E1E70A04C004B99B8 /* Frameworks */,
 				E06CF49F1E70A04C004B99B8 /* Resources */,
+				E07AEB6E1E70DF34001A7E37 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -137,6 +214,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E07AEB571E70B35D001A7E37 /* Bridging.h in Sources */,
 				E06CF4A71E70A04C004B99B8 /* ViewController.swift in Sources */,
 				E06CF4A51E70A04C004B99B8 /* AppDelegate.swift in Sources */,
 			);
@@ -262,10 +340,22 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = SM4CZU5JS6;
+				ENABLE_BITCODE = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/WebRTC-iOS-Client/Frameworks/WebRTC-iOS",
+				);
+				HEADER_SEARCH_PATHS = "\"$(SRCROOT)/Pods/Headers\"/**";
 				INFOPLIST_FILE = "WebRTC-iOS-Client/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Pods/libjingle_peerconnection/libjingle_peerconnection",
+					"$(PROJECT_DIR)/WebRTC-iOS-Client/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.votebin.WebRTC-iOS-Client";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "WebRTC-iOS-Client/Bridging.h";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
@@ -275,10 +365,22 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = SM4CZU5JS6;
+				ENABLE_BITCODE = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/WebRTC-iOS-Client/Frameworks/WebRTC-iOS",
+				);
+				HEADER_SEARCH_PATHS = "\"$(SRCROOT)/Pods/Headers\"/**";
 				INFOPLIST_FILE = "WebRTC-iOS-Client/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Pods/libjingle_peerconnection/libjingle_peerconnection",
+					"$(PROJECT_DIR)/WebRTC-iOS-Client/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.votebin.WebRTC-iOS-Client";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "WebRTC-iOS-Client/Bridging.h";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
@@ -302,6 +404,7 @@
 				E06CF4B51E70A04C004B99B8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

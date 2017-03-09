@@ -1,3 +1,6 @@
 [submodule "WebRTC-server"]
 	path = WebRTC-server
 	url = https://github.com/adis300/apprtc-server
+[submodule "WebRTC-iOS-Client/WebRTC-iOS-Client/Frameworks/WebRTC-iOS"]
+	path = WebRTC-iOS-Client/WebRTC-iOS-Client/Frameworks/WebRTC-iOS
+	url = https://github.com/wenxin3262/WebRTC-iOS
