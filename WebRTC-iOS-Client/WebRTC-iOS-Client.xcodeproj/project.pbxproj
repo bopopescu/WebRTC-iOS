@@ -43,6 +43,7 @@
 		E07AEBAA1E70DF9D001A7E37 /* RTCMediaConstraints+JSON.m in Sources */ = {isa = PBXBuildFile; fileRef = E07AEB971E70DF9D001A7E37 /* RTCMediaConstraints+JSON.m */; };
 		E07AEBAB1E70DF9D001A7E37 /* RTCSessionDescription+JSON.m in Sources */ = {isa = PBXBuildFile; fileRef = E07AEB991E70DF9D001A7E37 /* RTCSessionDescription+JSON.m */; };
 		E07AEBAC1E70DF9D001A7E37 /* SRWebSocket.m in Sources */ = {isa = PBXBuildFile; fileRef = E07AEB9A1E70DF9D001A7E37 /* SRWebSocket.m */; };
+		E07AEBAF1E70E2B5001A7E37 /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = E07AEBAE1E70E2B5001A7E37 /* Config.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -121,6 +122,7 @@
 		E07AEB991E70DF9D001A7E37 /* RTCSessionDescription+JSON.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "RTCSessionDescription+JSON.m"; sourceTree = "<group>"; };
 		E07AEB9A1E70DF9D001A7E37 /* SRWebSocket.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SRWebSocket.m; sourceTree = "<group>"; };
 		E07AEBAD1E70DFC7001A7E37 /* SRWebSocket.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SRWebSocket.h; sourceTree = "<group>"; };
+		E07AEBAE1E70E2B5001A7E37 /* Config.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -168,6 +170,7 @@
 			children = (
 				E07AEB6F1E70DF9D001A7E37 /* Lib */,
 				E07AEB111E70A930001A7E37 /* Bridging.h */,
+				E07AEBAE1E70E2B5001A7E37 /* Config.swift */,
 				E06CF4A41E70A04C004B99B8 /* AppDelegate.swift */,
 				E06CF4A61E70A04C004B99B8 /* ViewController.swift */,
 				E06CF4A81E70A04C004B99B8 /* Main.storyboard */,
@@ -336,6 +339,7 @@
 				E06CF4A51E70A04C004B99B8 /* AppDelegate.swift in Sources */,
 				E07AEBA01E70DF9D001A7E37 /* ARDMessageResponse.m in Sources */,
 				E07AEBA81E70DF9D001A7E37 /* RTCICECandidate+JSON.m in Sources */,
+				E07AEBAF1E70E2B5001A7E37 /* Config.swift in Sources */,
 				E07AEBA61E70DF9D001A7E37 /* ARDWebSocketChannel.m in Sources */,
 				E07AEB9E1E70DF9D001A7E37 /* ARDCEODTURNClient.m in Sources */,
 				E07AEBAA1E70DF9D001A7E37 /* RTCMediaConstraints+JSON.m in Sources */,
