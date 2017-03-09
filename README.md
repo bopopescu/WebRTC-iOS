@@ -24,8 +24,7 @@ google-cloud-sdk/bin/dev_appserver.py ./WebRTC-server/out/app_engine/
 
 # Running the iOS client
 `
-cd WebRTC-iOS-Client
-pod update
+Simply change Config.swift for your settings
 `
 
 # Useful docs
