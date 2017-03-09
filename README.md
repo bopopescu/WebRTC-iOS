@@ -2,7 +2,7 @@
 
 ## Prepare and build app server
 ```
-cd WebRTC-server
+cd WebRTC-Server
 
 npm install
 
@@ -14,7 +14,7 @@ grunt build
 
 ```
 cd [root]
-google-cloud-sdk/bin/dev_appserver.py ./WebRTC-server/out/app_engine/
+google-cloud-sdk/bin/dev_appserver.py ./WebRTC-Server/out/app_engine/
 
 ```
 
