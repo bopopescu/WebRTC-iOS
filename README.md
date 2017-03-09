@@ -14,7 +14,13 @@ grunt build
 
 ```
 cd [root]
-google-cloud-sdk/bin/dev_appserver.py ./WebRTC-Server/out/app_engine/
+python google-cloud-sdk/bin/dev_appserver.py ./WebRTC-Server/out/app_engine/
+sudo python google-cloud-sdk/bin/dev_appserver.py ./WebRTC-Server/out/app_engine/ --host 9.108.160.121 --port=80
+
+// Deployement
+google-cloud-sdk/bin/gcloud auth login
+google-cloud-sdk/bin/gcloud config set project YOUR_PROJECT_ID
+google-cloud-sdk/bin/gcloud app deploy ./WebRTC-Server/out/app_engine/app.yaml 
 
 ```
 
