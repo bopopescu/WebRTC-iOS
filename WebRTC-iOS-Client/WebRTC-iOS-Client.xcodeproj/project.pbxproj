@@ -18,7 +18,6 @@
 		E07AEB411E70B062001A7E37 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E07AEB401E70B062001A7E37 /* AVFoundation.framework */; };
 		E07AEB431E70B068001A7E37 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E07AEB421E70B068001A7E37 /* AudioToolbox.framework */; };
 		E07AEB451E70B075001A7E37 /* GLKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E07AEB441E70B075001A7E37 /* GLKit.framework */; };
-		E07AEB571E70B35D001A7E37 /* Bridging.h in Sources */ = {isa = PBXBuildFile; fileRef = E07AEB111E70A930001A7E37 /* Bridging.h */; };
 		E07AEB611E70DD33001A7E37 /* VideoToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E07AEB601E70DD33001A7E37 /* VideoToolbox.framework */; };
 		E07AEB631E70DE95001A7E37 /* CoreImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E07AEB621E70DE95001A7E37 /* CoreImage.framework */; };
 		E07AEB671E70DEF4001A7E37 /* libc++.1.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = E07AEB641E70DEF4001A7E37 /* libc++.1.dylib */; };
@@ -44,6 +43,7 @@
 		E07AEBAB1E70DF9D001A7E37 /* RTCSessionDescription+JSON.m in Sources */ = {isa = PBXBuildFile; fileRef = E07AEB991E70DF9D001A7E37 /* RTCSessionDescription+JSON.m */; };
 		E07AEBAC1E70DF9D001A7E37 /* SRWebSocket.m in Sources */ = {isa = PBXBuildFile; fileRef = E07AEB9A1E70DF9D001A7E37 /* SRWebSocket.m */; };
 		E07AEBAF1E70E2B5001A7E37 /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = E07AEBAE1E70E2B5001A7E37 /* Config.swift */; };
+		E07AEBB41E70E830001A7E37 /* NSURLSession+SynchronousRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = E07AEBB31E70E830001A7E37 /* NSURLSession+SynchronousRequest.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -123,6 +123,8 @@
 		E07AEB9A1E70DF9D001A7E37 /* SRWebSocket.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SRWebSocket.m; sourceTree = "<group>"; };
 		E07AEBAD1E70DFC7001A7E37 /* SRWebSocket.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SRWebSocket.h; sourceTree = "<group>"; };
 		E07AEBAE1E70E2B5001A7E37 /* Config.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
+		E07AEBB21E70E830001A7E37 /* NSURLSession+SynchronousRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSURLSession+SynchronousRequest.h"; sourceTree = "<group>"; };
+		E07AEBB31E70E830001A7E37 /* NSURLSession+SynchronousRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSURLSession+SynchronousRequest.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -244,6 +246,8 @@
 				E07AEB991E70DF9D001A7E37 /* RTCSessionDescription+JSON.m */,
 				E07AEBAD1E70DFC7001A7E37 /* SRWebSocket.h */,
 				E07AEB9A1E70DF9D001A7E37 /* SRWebSocket.m */,
+				E07AEBB21E70E830001A7E37 /* NSURLSession+SynchronousRequest.h */,
+				E07AEBB31E70E830001A7E37 /* NSURLSession+SynchronousRequest.m */,
 			);
 			path = Lib;
 			sourceTree = "<group>";
@@ -325,13 +329,13 @@
 				E07AEB9C1E70DF9D001A7E37 /* ARDAppEngineClient.m in Sources */,
 				E07AEB9B1E70DF9D001A7E37 /* ARDAppClient.m in Sources */,
 				E07AEBA21E70DF9D001A7E37 /* ARDSDPUtils.m in Sources */,
+				E07AEBB41E70E830001A7E37 /* NSURLSession+SynchronousRequest.m in Sources */,
 				E07AEBA41E70DF9D001A7E37 /* ARDStatsBuilder.m in Sources */,
 				E07AEB9F1E70DF9D001A7E37 /* ARDJoinResponse.m in Sources */,
 				E07AEBA91E70DF9D001A7E37 /* RTCICEServer+JSON.m in Sources */,
 				E07AEBA31E70DF9D001A7E37 /* ARDSignalingMessage.m in Sources */,
 				E07AEBA51E70DF9D001A7E37 /* ARDUtilities.m in Sources */,
 				E07AEB9D1E70DF9D001A7E37 /* ARDBitrateTracker.m in Sources */,
-				E07AEB571E70B35D001A7E37 /* Bridging.h in Sources */,
 				E07AEBAB1E70DF9D001A7E37 /* RTCSessionDescription+JSON.m in Sources */,
 				E07AEBA11E70DF9D001A7E37 /* ARDRegisterResponse.m in Sources */,
 				E07AEBAC1E70DF9D001A7E37 /* SRWebSocket.m in Sources */,
@@ -467,19 +471,11 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = SM4CZU5JS6;
 				ENABLE_BITCODE = NO;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/WebRTC-iOS-Client/Frameworks/WebRTC-iOS",
-					"$(PROJECT_DIR)/WebRTC-iOS-Client/Lib/include/WebRTC",
-				);
+				FRAMEWORK_SEARCH_PATHS = "$(PROJECT_DIR)/WebRTC-iOS-Client/Frameworks/WebRTC-iOS";
 				HEADER_SEARCH_PATHS = "";
 				INFOPLIST_FILE = "WebRTC-iOS-Client/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				LIBRARY_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/Pods/libjingle_peerconnection/libjingle_peerconnection",
-					"$(PROJECT_DIR)/WebRTC-iOS-Client/Frameworks",
-				);
+				LIBRARY_SEARCH_PATHS = "";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.votebin.WebRTC-iOS-Client";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "WebRTC-iOS-Client/Bridging.h";
@@ -493,19 +489,11 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = SM4CZU5JS6;
 				ENABLE_BITCODE = NO;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/WebRTC-iOS-Client/Frameworks/WebRTC-iOS",
-					"$(PROJECT_DIR)/WebRTC-iOS-Client/Lib/include/WebRTC",
-				);
+				FRAMEWORK_SEARCH_PATHS = "$(PROJECT_DIR)/WebRTC-iOS-Client/Frameworks/WebRTC-iOS";
 				HEADER_SEARCH_PATHS = "";
 				INFOPLIST_FILE = "WebRTC-iOS-Client/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				LIBRARY_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/Pods/libjingle_peerconnection/libjingle_peerconnection",
-					"$(PROJECT_DIR)/WebRTC-iOS-Client/Frameworks",
-				);
+				LIBRARY_SEARCH_PATHS = "";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.votebin.WebRTC-iOS-Client";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "WebRTC-iOS-Client/Bridging.h";

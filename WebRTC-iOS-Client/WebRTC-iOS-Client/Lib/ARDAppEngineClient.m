@@ -16,6 +16,7 @@
 #import "ARDMessageResponse.h"
 #import "ARDSignalingMessage.h"
 #import "ARDUtilities.h"
+#import "NSURLSession+SynchronousRequest.h"
 
 // TODO(tkchin): move these to a configuration object.
 static NSString * const kARDRoomServerHostUrl =
@@ -141,7 +142,8 @@ static NSInteger const kARDAppEngineClientErrorBadResponse = -1;
   // We want a synchronous request so that we know that we've left the room on
   // room server before we do any further work.
   RTCLog(@"C->RS: BYE");
-  [NSURLConnection sendSynchronousRequest:request
+    
+  [NSURLSession_SynchronousRequest sendSynchronousRequest:request
                         returningResponse:&response
                                     error:&error];
   if (error) {
@@ -169,5 +171,7 @@ static NSInteger const kARDAppEngineClientErrorBadResponse = -1;
   }];
   return error;
 }
+
+
 
 @end
