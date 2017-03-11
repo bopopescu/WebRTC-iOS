@@ -15,7 +15,8 @@ grunt build
 ```
 cd [root]
 python google-cloud-sdk/bin/dev_appserver.py ./WebRTC-Server/out/app_engine/
-sudo python google-cloud-sdk/bin/dev_appserver.py ./WebRTC-Server/out/app_engine/ --host 9.108.160.121 --port=80
+sudo python google-cloud-sdk/bin/dev_appserver.py ./WebRTC-Server/out/app_engine/
+# optional --host 9.108.160.121 --port=80  (HTTPS required for local network)
 
 // Deployement
 google-cloud-sdk/bin/gcloud auth login
@@ -36,20 +37,20 @@ Simply change Config.swift for your settings
 # Useful docs
 * Appear.in tutorial
 https://tech.appear.in/2015/05/25/Getting-started-with-WebRTC-on-iOS/
+
 * Client app demo
 https://github.com/Mahabali/Apprtc-swift
 
-# Open a port on mac
-Edit by adding following lines
+* Official server end
+https://github.com/webrtc/apprtc
 
-```
-sudo vim /etc/pf.conf
+* Talky iOS demo
+https://github.com/otalk
+https://github.com/otalk/iOS-demo
 
-# Open port 8080 for TCP on all interfaces
-pass in proto tcp from any to any port 8080
-```
-Test
-```
-sudo pfctl -vnf /etc/pf.conf
-```
+* libjingle
+https://developers.google.com/talk/libjingle/developer_guide#jingle-and-libjingle
+
+* Broadcast
+https://github.com/muaz-khan/WebRTC-Scalable-Broadcast
 
