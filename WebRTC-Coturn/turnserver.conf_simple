@@ -1,0 +1,36 @@
+# 不多讲
+listening-device=eth0
+listening-port=3478
+relay-device=eth0
+# 记得开防火墙
+min-port=50000
+max-port=65535
+# 更繁杂的输出日志
+Verbose
+# WebRTC 的消息里会用到
+fingerprint
+# WebRTC 认证需要
+lt-cred-mech
+# REST API 认证需要
+use-auth-secret
+# REST API 加密所需的 KEY
+# 这里我们使用“静态”的 KEY，Google 自己也用的这个
+static-auth-secret=4080218913
+# 用户登录域
+realm=votebin.com
+# 可为 TURN 服务提供更安全的访问
+stale-nonce
+# SSL 需要用到的, 生成命令:
+# sudo openssl req -x509 -newkey rsa:2048 -keyout /etc/turn_server_pkey.pem -out /etc/turn_server_cert.pem -days 99999 -nodes
+cert=/etc/turn_server_cert.pem
+pkey=/etc/turn_server_pkey.pem
+# 屏蔽 loopback, multicast IP地址的 relay
+no-loopback-peers
+no-multicast-peers
+# 启用 Mobility ICE 支持(具体干啥的我也不晓得)
+mobility
+# 禁用本地 telnet cli 管理接口
+no-cli
+external-ip=52.32.134.226
+relay-ip=172.31.47.4
+listening-ip=172.31.47.4
