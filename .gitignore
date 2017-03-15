@@ -66,5 +66,8 @@ iOSInjectionProject/
 google-cloud-sdk/.install/
 google-cloud-sdk/platform/
 *.pyc
+WebRTC-Framework/src/
+WebRTC-Framework/.gclient
+WebRTC-Framework/.gclient_entries
 
 

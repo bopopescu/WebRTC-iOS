@@ -9,3 +9,18 @@ fetch --nohooks webrtc_ios
 gclient sync
 ```
 
+3. Build cd src
+```
+# debug build for 64-bit iOS
+gn gen out/ios_64 --args='target_os="ios" target_cpu="arm64"'
+
+# debug build for simulator
+gn gen out/ios_sim --args='target_os="ios" target_cpu="x64"'
+```
+
+3. Compile with ninja
+```
+// ninja -C out/ios_64 AppRTCMobile
+// Compile as framework
+ninja -C out/ios_64 rtc_sdk_framework_objc
+```
