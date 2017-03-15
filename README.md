@@ -56,11 +56,3 @@ https://github.com/muaz-khan/WebRTC-Scalable-Broadcast
 
 * Tutorial
 https://github.com/ChenYilong/WebRTC/blob/master/WebRTC入门教程/WebRTC入门教程.md
-
-
-# Building iOS framework
-1. Install chromium tools
-```
-git clone https://chromium.googlesource.com/chromium/tools/depot_tools.gitexport PATH=$HOME/Documents/tools/depot_tools:"$PATH"
-```
-2. 
