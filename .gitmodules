@@ -4,3 +4,6 @@
 [submodule "WebRTC-Server"]
 	path = WebRTC-Server
 	url = https://github.com/adis300/apprtc-server.git
+[submodule "WebRTC-Framework"]
+	path = WebRTC-Framework
+	url = https://chromium.googlesource.com/external/webrtc.git

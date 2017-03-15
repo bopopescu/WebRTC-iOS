@@ -18,6 +18,9 @@ class CallVC: UIViewController, ARDAppClientDelegate {
     
     @IBOutlet weak var matchedRoomId: UILabel!
     
+    var localVideoTrack:RTCVideoTrack?;
+    var remoteVideoTrack:RTCVideoTrack?;
+    
     var roomId: String?
     
     override func viewDidLoad() {
@@ -25,8 +28,9 @@ class CallVC: UIViewController, ARDAppClientDelegate {
         self.client = ARDAppClient(delegate: self)
     }
     
-    override func viewWillAppear(_ animated: Bool) {
+    override func viewDidAppear(_ animated: Bool) {
         if let room = roomId{
+            self.disconnect()
             joinRoom(room)
         }else{
             userIdField.text = AppDelegate.userId
@@ -42,7 +46,7 @@ class CallVC: UIViewController, ARDAppClientDelegate {
         connectionStatusLabel.text = "Connected"
         matchedRoomId.text = roomId
         
-        self.client?.connectToRoom(withId: roomId, isLoopback: false, isAudioOnly: true, shouldMakeAecDump: false, shouldUseLevelControl: false)
+        self.client?.connectToRoom(withId: roomId, isLoopback: false, isAudioOnly: false, shouldMakeAecDump: false, shouldUseLevelControl: false)
     }
     
     func scheduleMatchRequest(_ waitTime: TimeInterval){
@@ -54,6 +58,7 @@ class CallVC: UIViewController, ARDAppClientDelegate {
                 if let matched = response?["matched"] as? NSNumber{
                     if matched == 1 {
                         let roomId = response!["roomId"] as! String
+                        self.matchedRoomId.text = roomId
                         self.joinRoom(roomId)
                     }else{
                         self.scheduleMatchRequest(Config.matchTimeInterval)
@@ -92,21 +97,8 @@ extension CallVC{
         }
     }
     
-    public func appClient(_ client: ARDAppClient!, didError error: Error!) {
-        AppDelegate.showAlert("Error", message: error.localizedDescription, context: self)
-        self.disconnect()
-    }
-    
-    func appClient(_ client: ARDAppClient!, didReceiveLocalVideoTrack localVideoTrack: RTCVideoTrack!) {
-    }
-    
-    func appClient(_ client: ARDAppClient!, didReceiveRemoteVideoTrack remoteVideoTrack: RTCVideoTrack!) {
-    }
-    func appclient(_ client: ARDAppClient!, didRotateWithLocal localVideoTrack: RTCVideoTrack!, remoteVideoTrack: RTCVideoTrack!) {
-    }
-    func appClient(_ client: ARDAppClient!, didGetStats stats: [Any]!) {
-    }
     func appClient(_ client: ARDAppClient!, didChange state: RTCIceConnectionState) {
+        /*
         switch (state) {
         case .connected:
             print("ICE connected.");
@@ -115,6 +107,24 @@ extension CallVC{
         default:
             print("No op for other status")
             // No op
-        }
+        }*/
     }
+    
+    public func appClient(_ client: ARDAppClient!, didError error: Error!) {
+        AppDelegate.showAlert("Error", message: error.localizedDescription, context: self)
+        self.disconnect()
+    }
+    
+    func appClient(_ client: ARDAppClient!, didReceiveLocalVideoTrack localVideoTrack: RTCVideoTrack!) {
+        self.localVideoTrack=localVideoTrack
+    }
+    
+    func appClient(_ client: ARDAppClient!, didReceiveRemoteVideoTrack remoteVideoTrack: RTCVideoTrack!) {
+        self.remoteVideoTrack=remoteVideoTrack
+    }
+    func appclient(_ client: ARDAppClient!, didRotateWithLocal localVideoTrack: RTCVideoTrack!, remoteVideoTrack: RTCVideoTrack!) {
+    }
+    func appClient(_ client: ARDAppClient!, didGetStats stats: [Any]!) {
+    }
+    
 }
