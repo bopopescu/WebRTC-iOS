@@ -30,9 +30,9 @@ function checkTURNServer(turnConfig, timeout) {
 }
 
 checkTURNServer({
-    url: 'turn:ec2-54-70-162-232.us-west-2.compute.amazonaws.com',
+    url: 'turn:turn.votebin.com:3478',
     username: 'votebin',
-    credential: '12345678Votebin'
+    credential: 'votebin123'
 }).then(function(bool) {
     console.log('is my TURN server active? ', bool ? 'yes' : 'no');
 }).catch(console.error.bind(console));

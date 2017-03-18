@@ -27,3 +27,9 @@ service coturn start
 ```
 
 ec2-52-32-134-226.us-west-2.compute.amazonaws.com/turn?username=votebin&key=4080218913
+
+
+5. To securely copy certificates
+```
+scp -i coturn-key.pem goletsencrypt ec2-user@ec2-52-32-134-226.us-west-2.compute.amazonaws.com:~/
+```
