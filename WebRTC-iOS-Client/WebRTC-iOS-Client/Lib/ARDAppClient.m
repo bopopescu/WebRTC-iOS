@@ -40,8 +40,8 @@ static NSString * const kARDDefaultSTUNServerUrl =
     @"stun:stun.l.google.com:19302";
 // TODO(tkchin): figure out a better username for CEOD statistics.
 static NSString * const kARDTurnRequestUrl =
-    @"https://computeengineondemand.appspot.com"
-    @"/turn?username=iapprtc&key=4080218913";
+var turnUrl = 
+    @"https://turn.votebin.com:3478/turn?username=votebin&key=4080218913";
 
 static NSString * const kARDAppClientErrorDomain = @"ARDAppClient";
 static NSInteger const kARDAppClientErrorUnknown = -1;

@@ -22,8 +22,6 @@
 		E07AEB671E70DEF4001A7E37 /* libc++.1.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = E07AEB641E70DEF4001A7E37 /* libc++.1.dylib */; };
 		E07AEB681E70DEF4001A7E37 /* libicucore.A.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = E07AEB651E70DEF4001A7E37 /* libicucore.A.dylib */; };
 		E07AEB691E70DEF4001A7E37 /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = E07AEB661E70DEF4001A7E37 /* libsqlite3.dylib */; };
-		E07AEB6C1E70DF34001A7E37 /* WebRTC.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E07AEB6A1E70DF04001A7E37 /* WebRTC.framework */; };
-		E07AEB6D1E70DF34001A7E37 /* WebRTC.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = E07AEB6A1E70DF04001A7E37 /* WebRTC.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		E07AEB9B1E70DF9D001A7E37 /* ARDAppClient.m in Sources */ = {isa = PBXBuildFile; fileRef = E07AEB721E70DF9D001A7E37 /* ARDAppClient.m */; };
 		E07AEB9C1E70DF9D001A7E37 /* ARDAppEngineClient.m in Sources */ = {isa = PBXBuildFile; fileRef = E07AEB741E70DF9D001A7E37 /* ARDAppEngineClient.m */; };
 		E07AEB9D1E70DF9D001A7E37 /* ARDBitrateTracker.m in Sources */ = {isa = PBXBuildFile; fileRef = E07AEB761E70DF9D001A7E37 /* ARDBitrateTracker.m */; };
@@ -46,6 +44,9 @@
 		E07AEBB61E70EB26001A7E37 /* CallVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E07AEBB51E70EB26001A7E37 /* CallVC.swift */; };
 		E07AEBB81E70EB9C001A7E37 /* HomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E07AEBB71E70EB9C001A7E37 /* HomeVC.swift */; };
 		E07AEBBE1E7123DD001A7E37 /* HTTPRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = E07AEBBD1E7123DD001A7E37 /* HTTPRequest.m */; };
+		E0BD4BBE1E790E0C00931DE8 /* WebRTC.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E0BD4BBD1E790E0C00931DE8 /* WebRTC.framework */; };
+		E0BD4BBF1E790E2400931DE8 /* WebRTC.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E0BD4BBD1E790E0C00931DE8 /* WebRTC.framework */; };
+		E0BD4BC01E790E2400931DE8 /* WebRTC.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = E0BD4BBD1E790E0C00931DE8 /* WebRTC.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -55,7 +56,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				E07AEB6D1E70DF34001A7E37 /* WebRTC.framework in Embed Frameworks */,
+				E0BD4BC01E790E2400931DE8 /* WebRTC.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -82,7 +83,6 @@
 		E07AEB641E70DEF4001A7E37 /* libc++.1.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libc++.1.dylib"; path = "WebRTC-iOS-Client/Frameworks/libc++.1.dylib"; sourceTree = "<group>"; };
 		E07AEB651E70DEF4001A7E37 /* libicucore.A.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libicucore.A.dylib; path = "WebRTC-iOS-Client/Frameworks/libicucore.A.dylib"; sourceTree = "<group>"; };
 		E07AEB661E70DEF4001A7E37 /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = "WebRTC-iOS-Client/Frameworks/libsqlite3.dylib"; sourceTree = "<group>"; };
-		E07AEB6A1E70DF04001A7E37 /* WebRTC.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebRTC.framework; path = "WebRTC-iOS-Client/Frameworks/WebRTC-iOS/WebRTC.framework"; sourceTree = "<group>"; };
 		E07AEB701E70DF9D001A7E37 /* ARDAppClient+Internal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "ARDAppClient+Internal.h"; sourceTree = "<group>"; };
 		E07AEB711E70DF9D001A7E37 /* ARDAppClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ARDAppClient.h; sourceTree = "<group>"; };
 		E07AEB721E70DF9D001A7E37 /* ARDAppClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ARDAppClient.m; sourceTree = "<group>"; };
@@ -130,6 +130,7 @@
 		E07AEBB71E70EB9C001A7E37 /* HomeVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeVC.swift; sourceTree = "<group>"; };
 		E07AEBBC1E7123DD001A7E37 /* HTTPRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HTTPRequest.h; sourceTree = "<group>"; };
 		E07AEBBD1E7123DD001A7E37 /* HTTPRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HTTPRequest.m; sourceTree = "<group>"; };
+		E0BD4BBD1E790E0C00931DE8 /* WebRTC.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebRTC.framework; path = "WebRTC-iOS-Client/Frameworks/WebRTC.framework"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -148,7 +149,8 @@
 				E07AEB431E70B068001A7E37 /* AudioToolbox.framework in Frameworks */,
 				E07AEB611E70DD33001A7E37 /* VideoToolbox.framework in Frameworks */,
 				E07AEB451E70B075001A7E37 /* GLKit.framework in Frameworks */,
-				E07AEB6C1E70DF34001A7E37 /* WebRTC.framework in Frameworks */,
+				E0BD4BBF1E790E2400931DE8 /* WebRTC.framework in Frameworks */,
+				E0BD4BBE1E790E0C00931DE8 /* WebRTC.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -192,7 +194,7 @@
 		E07AEB331E70B02C001A7E37 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				E07AEB6A1E70DF04001A7E37 /* WebRTC.framework */,
+				E0BD4BBD1E790E0C00931DE8 /* WebRTC.framework */,
 				E07AEB641E70DEF4001A7E37 /* libc++.1.dylib */,
 				E07AEB651E70DEF4001A7E37 /* libicucore.A.dylib */,
 				E07AEB661E70DEF4001A7E37 /* libsqlite3.dylib */,
@@ -489,7 +491,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = SM4CZU5JS6;
 				ENABLE_BITCODE = NO;
-				FRAMEWORK_SEARCH_PATHS = "$(PROJECT_DIR)/WebRTC-iOS-Client/Frameworks/WebRTC-iOS";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(PROJECT_DIR)/WebRTC-iOS-Client/Frameworks/WebRTC-iOS",
+					"$(PROJECT_DIR)/WebRTC-iOS-Client/Frameworks",
+				);
 				HEADER_SEARCH_PATHS = "";
 				INFOPLIST_FILE = "WebRTC-iOS-Client/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -507,7 +512,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = SM4CZU5JS6;
 				ENABLE_BITCODE = NO;
-				FRAMEWORK_SEARCH_PATHS = "$(PROJECT_DIR)/WebRTC-iOS-Client/Frameworks/WebRTC-iOS";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(PROJECT_DIR)/WebRTC-iOS-Client/Frameworks/WebRTC-iOS",
+					"$(PROJECT_DIR)/WebRTC-iOS-Client/Frameworks",
+				);
 				HEADER_SEARCH_PATHS = "";
 				INFOPLIST_FILE = "WebRTC-iOS-Client/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";

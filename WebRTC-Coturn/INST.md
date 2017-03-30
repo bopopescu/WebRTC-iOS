@@ -10,7 +10,7 @@ chmod 400 coturn-key.pem
 ssh -i "coturn-key.pem" ec2-52-32-134-226.us-west-2.compute.amazonaws.com
 
 3. Adding admin accounts
-turnadmin -a -r votebin.com -u votebin -p 12345678Votebin
+turnadmin -a -r votebin.com -u votebin -p votebin123
 
 4. Starting the service
 ```
