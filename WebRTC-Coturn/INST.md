@@ -7,7 +7,7 @@ http://www.jianshu.com/p/c55ecf5a3fcf
 
 2. In management console find public ip
 chmod 400 coturn-key.pem
-ssh -i "coturn-key.pem" ec2-52-32-134-226.us-west-2.compute.amazonaws.com
+ssh -i "coturn-key.pem" ec2-user@ec2-52-32-134-226.us-west-2.compute.amazonaws.com
 
 3. Adding admin accounts
 turnadmin -a -r votebin.com -u votebin -p votebin123
